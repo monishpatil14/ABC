@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScaleLine - Scale Your Business Like Never Before</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>ScaleLine</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#services" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#testimonials" class="nav-link">Testimonials</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    No Jargon. Just One KPI - 
+                    <span class="gradient-text">Profits</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Leading Business Scaling Partner for <strong>Entrepreneurs, Startups & Growing Businesses.</strong>
+                </p>
+                <p class="hero-description">
+                    Scale your business with ScaleLine's fully managed growth and marketing services!
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="openModal()">Let's Talk</button>
+                    <button class="btn btn-secondary">Learn More</button>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <h3>500+</h3>
+                    <p>Happy Clients</p>
+                </div>
+                <div class="stat-item">
+                    <h3>₹100Cr+</h3>
+                    <p>Revenue Generated</p>
+                </div>
+                <div class="stat-item">
+                    <h3>95%</h3>
+                    <p>Retention Rate</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Empowering Leaders Across Industries</h2>
+                <p>We help businesses scale efficiently with data-driven strategies and proven methodologies.</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>No Jargons. Just One KPI - <span class="gradient-text">Profits</span></h3>
+                    <p>
+                        We are hyper focused on increasing your profits, month over month. <strong>No fluff. High impact. No budget wasted.</strong> 
+                        We leverage learnings from thousands of experiments with successful businesses to create a robust growth engine 
+                        which generates compounding returns for your business, rather than linear growth.
+                    </p>
+                    <div class="features">
+                        <div class="feature-item">
+                            <i class="fas fa-chart-line"></i>
+                            <h4>Data-Driven Growth</h4>
+                            <p>Every decision backed by analytics and performance metrics</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-rocket"></i>
+                            <h4>Rapid Scaling</h4>
+                            <p>Accelerate your business growth with proven strategies</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-target"></i>
+                            <h4>ROI Focused</h4>
+                            <p>Maximum returns on every investment you make</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>We handle all your growth needs so you can focus on what you do best - running your business.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>Performance Marketing</h3>
+                    <p>Boost your monthly profits and outrank your competition with the help of our experienced Account Managers. We handle media buying across all major platforms.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-pen-fancy"></i>
+                    </div>
+                    <h3>Content & Creative Services</h3>
+                    <p>Maximize ROI with data-driven copy & clever design. We create content that achieves impressive engagement rates and cost-effective results.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chess"></i>
+                    </div>
+                    <h3>Business Strategy</h3>
+                    <p>Always have clarity on next steps in your growth journey and stay one step ahead of your competition. Your win is our win.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Video Production</h3>
+                    <p>Generate high impact with high-quality, scroll-stopping videos. We manage end-to-end video production including scripting, shooting and editing.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Automation & Systems</h3>
+                    <p>Streamline your operations with custom automation solutions that save time and increase efficiency across all business processes.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Team Building</h3>
+                    <p>Build high-performing teams with our recruitment and training services designed to scale your human resources effectively.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Clients Say About Us</h2>
+                <p>"85% of our clients have tripled their profits in the first 6 months."</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial-card active">
+                    <div class="testimonial-content">
+                        <p>"ScaleLine transformed our business completely. Our revenue grew from ₹2L to ₹20L per month in just 8 months. Their team understands growth like no one else."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Rajesh Sharma</h4>
+                            <p>CEO, TechVenture</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The team at ScaleLine doesn't just talk about results - they deliver them. Our customer acquisition cost dropped by 60% while our conversion rates doubled."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Priya Patel</h4>
+                            <p>Founder, EcoSolutions</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Working with ScaleLine was the best decision we made. They helped us scale from a small startup to a market leader in our industry within 18 months."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Arjun Mehta</h4>
+                            <p>Co-founder, FinanceFlow</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-dots">
+                <span class="dot active" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Scale Your Business?</h2>
+                <p>Join 500+ successful businesses that have scaled with ScaleLine</p>
+                <button class="btn btn-primary" onclick="openModal()">Get Started Today</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Ready to transform your business? Let's discuss how we can help you scale.</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>Mumbai, Maharashtra, India</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91 98765 43210</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>hello@scaleline.in</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Your Phone" required>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="">Select Service</option>
+                            <option value="performance-marketing">Performance Marketing</option>
+                            <option value="content-creative">Content & Creative</option>
+                            <option value="business-strategy">Business Strategy</option>
+                            <option value="video-production">Video Production</option>
+                            <option value="automation">Automation & Systems</option>
+                            <option value="team-building">Team Building</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Tell us about your business and goals" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ScaleLine</h3>
+                    <p>Scaling businesses through data-driven strategies and proven methodologies.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Performance Marketing</a></li>
+                        <li><a href="#">Content & Creative</a></li>
+                        <li><a href="#">Business Strategy</a></li>
+                        <li><a href="#">Video Production</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-envelope"></i> hello@scaleline.in</p>
+                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Mumbai, India</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ScaleLine. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="consultationModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Book a Free Consultation</h2>
+            <p>Fill out this form and we'll get back to you within 24 hours.</p>
+            <form class="modal-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" placeholder="Your Phone" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Company Name" required>
+                </div>
+                <div class="form-group">
+                    <select required>
+                        <option value="">Current Monthly Revenue</option>
+                        <option value="0-1L">₹0 - ₹1L</option>
+                        <option value="1-5L">₹1L - ₹5L</option>
+                        <option value="5-10L">₹5L - ₹10L</option>
+                        <option value="10-25L">₹10L - ₹25L</option>
+                        <option value="25L+">₹25L+</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="What are your main business challenges?" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Book Free Consultation</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
