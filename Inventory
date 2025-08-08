@@ -1,0 +1,148 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inventory Management</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f2f4f8;
+    }
+    header {
+      background-color: #4f46e5;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .form-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    input, button {
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      width: 100%;
+    }
+    button {
+      background-color: #4f46e5;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 2rem;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+    }
+    th {
+      background-color: #4f46e5;
+      color: white;
+    }
+    .total {
+      text-align: right;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Inventory Management System</h1>
+  </header>
+  <div class="container">
+    <div class="form-group">
+      <input type="text" id="itemName" placeholder="Item Name" />
+      <input type="text" id="category" placeholder="Category" />
+      <input type="number" id="quantity" placeholder="Quantity" />
+      <input type="number" id="price" placeholder="Unit Price (₹)" />
+      <input type="text" id="supplier" placeholder="Supplier" />
+      <input type="date" id="updated" />
+    </div>
+    <button onclick="addItem()">Add Item</button><table>
+  <thead>
+    <tr>
+      <th>Item ID</th>
+      <th>Item Name</th>
+      <th>Category</th>
+      <th>Qty</th>
+      <th>Price (₹)</th>
+      <th>Value (₹)</th>
+      <th>Supplier</th>
+      <th>Updated</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody id="inventoryTable"></tbody>
+</table>
+
+<div class="total" id="totalValue">Total Value: ₹0</div>
+
+  </div>  <script>
+    let inventory = JSON.parse(localStorage.getItem("inventory")) || [];
+
+    function renderTable() {
+      const table = document.getElementById("inventoryTable");
+      table.innerHTML = "";
+      let total = 0;
+
+      inventory.forEach((item, index) => {
+        const row = document.createElement("tr");
+        const value = item.quantity * item.price;
+        total += value;
+        row.innerHTML = `
+          <td>ITM${index.toString().padStart(3, "0")}</td>
+          <td>${item.name}</td>
+          <td>${item.category}</td>
+          <td>${item.quantity}</td>
+          <td>${item.price}</td>
+          <td>${value}</td>
+          <td>${item.supplier}</td>
+          <td>${item.updated}</td>
+          <td><button onclick="deleteItem(${index})">❌</button></td>
+        `;
+        table.appendChild(row);
+      });
+
+      document.getElementById("totalValue").innerText = `Total Value: ₹${total}`;
+      localStorage.setItem("inventory", JSON.stringify(inventory));
+    }
+
+    function addItem() {
+      const item = {
+        name: document.getElementById("itemName").value,
+        category: document.getElementById("category").value,
+        quantity: parseInt(document.getElementById("quantity").value),
+        price: parseFloat(document.getElementById("price").value),
+        supplier: document.getElementById("supplier").value,
+        updated: document.getElementById("updated").value,
+      };
+      inventory.push(item);
+      renderTable();
+    }
+
+    function deleteItem(index) {
+      inventory.splice(index, 1);
+      renderTable();
+    }
+
+    renderTable();
+  </script></body>
+</html>
